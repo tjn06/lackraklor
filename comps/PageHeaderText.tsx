@@ -24,7 +24,7 @@ const StyledHeaderTextArticle = styled.article`
 `
 
 const StyledTextLeft = styled.span`
-  font-family: Qhytsdakx;
+  font-family: 'Qhytsdakx';
   font-size: 30.5vw;
   line-height: 30.5vw;
   color: ${props => (props.theme.colors.main)};
