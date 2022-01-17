@@ -1,11 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-import { data } from '../../content/data'
-import { data1 } from '../../content/data'
-
-import Booking from '../../public/icons/booking.png'
-import PriceTag from '../../public/icons/price_tag.png'
+import { gridItems } from '../../content/data'
 
 const StyledTwoGrid = styled.section`
   display: grid;
@@ -160,9 +156,9 @@ const TwoGrid = ({arrayItemStart, arrayItemStop}: TwoGridProps) => {
   return(
     <StyledTwoGrid>
 
-    {data1.slice(arrayItemStart, arrayItemStop).map((item, i) => 
+    {gridItems.slice(arrayItemStart, arrayItemStop).map((item, i) => 
       <StyledCenterGridItem key={i} className={item.scrollNavClass}>
-        <Image src={item.imgSrc} alt="Boka" width={40} height={40}/>
+        <Image src={item.imgSrcIcon} alt={item.altIcon} width={40} height={40}/>
         <StyledHeaderGridItemText>
           {item.header}
         </StyledHeaderGridItemText>

@@ -1,10 +1,14 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
+import { gridItemsImg } from '../../content/data'
+
 import Hand1 from '../../public/pichures/h_4.jpg'
 import Hand2 from '../../public/pichures/h_2.jpg'
 import Hand3 from '../../public/pichures/h_5.jpg'
 import Hand4 from '../../public/pichures/h_6.jpg'
+
+
 
 const StyledTwoGrid = styled.section`
   display: grid;
@@ -173,95 +177,55 @@ const TwoGridImages = () => {
   return(
     <StyledTwoGrid>
 
-      <StyledCenterGridItem className="news">
-        
-        <StyledHeaderGridItemText>
-          NYHETER
-        </StyledHeaderGridItemText>
-        <StyledSubGridWrapper>
-          <StyledSubGridItemText>
-            VI HAR MASSOR ATT VÄLJA
-          </StyledSubGridItemText>
-        </StyledSubGridWrapper>
-        <StyledTextGridWrapper>
+      {gridItemsImg.map((item, i) => 
+        <StyledCenterGridItem key={i} className={item.scrollNavClass}>
+          <Image src={item.imgSrcIcon} alt={item.scrollNavClass}  width={40} height={40}/>
+          <StyledHeaderGridItemText>
+            {item.header}
+          </StyledHeaderGridItemText>
+          <StyledSubGridWrapper>
+            <StyledSubGridItemText>
+              {item.subHeader}
+            </StyledSubGridItemText>
+          </StyledSubGridWrapper>
+          <StyledTextGridWrapper>
             <StyledGridItemText>
-              Du har även möjligheten att boka direkt
-              via mail eller telefon om du inte vill boka
-              via bokadirekt.
+              {item.text}
             </StyledGridItemText>
           </StyledTextGridWrapper>
 
           <ImageContainer>
             <StyledImgFigContainer>
             <Image
-              src={Hand1}
-              alt="Hand1"
+              src={item.imgSrc1}
+              alt={item.imgSrc1Alt}
+              width={600}
+              height={800}
               layout="responsive"
             />
             <FigCaption>
-              EXEMPEL
+              {item.figCaption1}
             </FigCaption>
             </StyledImgFigContainer>
             
             <StyledImgFigContainer>
             <Image
-              src={Hand2}
-              alt="Hand2"
+              src={item.imgSrc2}
+              alt={item.imgSrc2Alt}
+              width={600}
+              height={800}
               layout="responsive"
             />
             <FigCaption>
-              NAILS
+              {item.figCaption2}
             </FigCaption>
             </StyledImgFigContainer>
           </ImageContainer>
 
-      </StyledCenterGridItem>
+        </StyledCenterGridItem>
+      )}
 
-
-      <StyledCenterGridItem className="offer">
-        <StyledHeaderGridItemText>
-          ERBJUDANDE
-        </StyledHeaderGridItemText>
-        <StyledSubGridWrapper>
-          <StyledSubGridItemText>
-            EXEMPEL PÅ OLIKA NAGLAR
-          </StyledSubGridItemText>
-        </StyledSubGridWrapper>
-        <StyledTextGridWrapper>
-          <StyledGridItemText>
-            Vi erbjuer en uppsjö av olika nagelbehanddlingar,
-            se vår prislista och hitta något som passar dig.
-          </StyledGridItemText>
-          {/* <StyledLink href="url">GÅ TILL BOOKADREKT.COM</StyledLink> */}
-        </StyledTextGridWrapper>
-  
-        <ImageContainer>
-          <StyledImgFigContainer>
-          <Image
-            src={Hand3}
-            alt="Hand3"
-            layout="responsive"
-          />
-          <FigCaption>
-            NAGELBEHANDLING
-          </FigCaption>
-          </StyledImgFigContainer>
-
-          <StyledImgFigContainer>
-          <Image
-            src={Hand4}
-            alt="Hand4"
-            layout="responsive"
-          />
-          <FigCaption>
-            FÄRGER
-          </FigCaption>
-          </StyledImgFigContainer>
-        </ImageContainer>
-
-      </StyledCenterGridItem>
-
-  </StyledTwoGrid>
+    </StyledTwoGrid>
   )
 }
 

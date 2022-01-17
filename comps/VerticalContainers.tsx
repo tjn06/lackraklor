@@ -22,6 +22,8 @@ const WelcomeContentMaxWidth = styled.article`
   z-index: 2;
   text-align: center;
   max-width: 600px;
+  padding: 0 1% 0 1%;
+
 `
 
 const StyledWelcomText= styled.p`

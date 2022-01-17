@@ -229,7 +229,7 @@ const Navbar = () => {
     const isScrolledDown = previousScrollTop < currentScrollTop;
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
 
-    const isFromTop = currentScrollTop > 300;
+    const isFromTop = currentScrollTop > 250;
 
     setChangeLogo(isFromTop);
     console.log("chagelogo", changeLogo);
