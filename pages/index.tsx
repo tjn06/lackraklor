@@ -61,7 +61,7 @@ const Home: NextPage = () => {
       <Head>
         <title>LÄCKRA KLOR</title>
         <meta name="LÄCKRAKLOR" content="Läckra klor, naglar" />
-        <link rel="" href="" />
+        <link rel="icon" type="image/png" href="/favIcon.svg" />
       </Head>
 
       <StyledMain>
