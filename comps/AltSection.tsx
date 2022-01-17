@@ -79,7 +79,7 @@ const AltSection = ({topBoarder, bottomBoarder}: AltSectionProps) => {
   return(
     <StyledTwoGrid topBoarder={topBoarder} bottomBoarder={bottomBoarder}>
 
-        <StyledHeaderGridItemText>SE MER</StyledHeaderGridItemText>
+        {/* <StyledHeaderGridItemText>SE MER</StyledHeaderGridItemText> */}
         <Separator/>
         <StyledLink href="url">PORTFOLIO</StyledLink>
         <Separator/>

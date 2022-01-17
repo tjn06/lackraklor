@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import styled from 'styled-components'
 
-const StyledUpArrow = styled.a`
+const StyledUpArrow = styled.span`
   cursor: pointer;
 
   #up-arrow {

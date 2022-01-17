@@ -63,7 +63,7 @@ const DragableCarousel = () => {
 
 
   return (
-    <CarouselDimensions>
+    <CarouselDimensions className="examples">
       <Line/>
     <Carousel
       responsive={responsive}

@@ -3,8 +3,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
-import { Link } from "react-scroll";
 
+
+
+import { Link } from "react-scroll";
+import ScrollContainer from "react-indiana-drag-scroll";
+
+
+import ScrollMenuHome from '../comps/ScrollMenuHome'
 import PageHeaderText from '../comps/PageHeaderText'
 import VerticalContainers from '../comps/VerticalContainers'
 import TwoGrid from '../comps/grid/TwoGrid'
@@ -15,7 +21,13 @@ import DragableCarousel from '../comps/DragableCarousel'
 import AltSection from '../comps/AltSection'
 import ViewPortTopContent from '../comps/ViewPortTopContent'
 import BookingBanner from '../comps/BookingBanner'
+import Map from '../comps/Map'
 import DownIcon from '../comps/DownIcon'
+
+import dynamic from "next/dynamic";
+import { useMemo } from 'react'
+
+
 
 const StyledMain = styled.main`
   overflow: hidden;
@@ -32,11 +44,22 @@ const StyledMaxWidth = styled.section`
 `
 
 const Home: NextPage = () => {
+  
+  const Map = useMemo(() => dynamic(
+    () => import("../comps/Map"),
+    { 
+      loading: () => <p>A map is loading</p>,
+      ssr: false
+    }
+  ), [])
+  // const Map = dynamic(() => import("../comps/Map"), {
+  //   ssr: false
+  // });
 
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>LÄCKRA KLOR</title>
         <meta name="LÄCKRAKLOR" content="Läckra klor, naglar" />
         <link rel="" href="" />
       </Head>
@@ -52,13 +75,21 @@ const Home: NextPage = () => {
         </StyledMaxWidth>
 
         <AutoSlider />
-        <AltSection topBoarder={true} bottomBoarder={false}/>
-        <TwoGrid/>
+        <ScrollMenuHome/>
+
+        {/* <AltSection topBoarder={true} bottomBoarder={false}/> */}
+        <TwoGrid arrayItemStart={0} arrayItemStop={2}/>
+
         <TwoGridImages/>
-        <AltSection topBoarder={true} bottomBoarder={true}/>
+
+        <TwoGrid arrayItemStart={2} arrayItemStop={4}/>
+
         <DragableCarousel/>
-        <BookingBanner topBoarder={true} bottomBoarder={true}/>
         
+        <BookingBanner topBoarder={true} bottomBoarder={false}/>
+        
+        <Map width={"100%"} height={"500px"} border={"0px"} padding={"0px"}/>
+
       </StyledMain>
 
     </div>

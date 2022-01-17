@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import Avatar from '../public/pichures/avatar_lk.png'
-import LogoBlack from '../public/logo/logo_black.svg'
+import LogoBlack from '../public/logo_black.svg'
 
 const WelcomeWrapper = styled.section`
   /* background: radial-gradient(ellipse at top, #91d8df, #b1274e),radial-gradient(ellipse at bottom, #91d8df, #b1274e); */
@@ -124,18 +124,24 @@ const StyledNamePosition = styled.article`
 const StyledName = styled.h2`
   margin:0;
   letter-spacing: 2px;
-  padding-left: 5px;
+  padding-left: 6px;
   font-size: 1.5rem;
   font-weight: 400;
   color: ${props => (props.theme.colors.primaryDarkGrey)};
+    @media ${props => props.theme.mediaQ.tablet} {
+      padding-left: 10px
+    }
 `
 const StyledMessage = styled.div`
   margin: 0;
   letter-spacing: 2px;
   padding: 0.2rem 0 0.2rem 0;
-  padding-left: 5px;
+  padding-left: 6px;
   font-size: 1.3rem;
   color: ${props => (props.theme.colors.main)};
+  @media ${props => props.theme.mediaQ.tablet} {
+      padding-left: 10px
+    }
 `
 
 const VerticalContainers = () => {
@@ -175,7 +181,8 @@ const VerticalContainers = () => {
         <StyledNamePosition>            
           <Image 
           src={LogoBlack}
-          alt="avatar"
+          width={80} height={110} alt="Logo" 
+
           // layout="fixed"
           />
           <StyledName>Louise Karlsson</StyledName>

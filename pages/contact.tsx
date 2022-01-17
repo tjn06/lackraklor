@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 import PageHeaderMultipleWords from '../comps/PageHeaderMultipleWords';
 import ViewPortTopContent from '../comps/ViewPortTopContent';
-import Image from 'next/image'
-import ContactPic from '../public/contact_pic.jpg'
-import AltSection from '../comps/AltSection'
 import ContactPresentation from '../comps/ContactPresentation'
 import ContactContent from '../comps/ContactContent'
 import BookingBanner from '../comps/BookingBanner'
+import Map from '../comps/Map'
 
 
 const Container = styled.div`
@@ -40,7 +38,8 @@ const Contact = () => {
       </StyledMaxWidth>
       {/* <AltSection topBoarder={true} bottomBoarder={true}/> */}
       
-      <BookingBanner topBoarder={true} bottomBoarder={true}/>
+      <BookingBanner topBoarder={true} bottomBoarder={false}/>
+      <Map width={"100%"} height={"500px"} border={"0px"} padding={"0px"}/>
     </Container>
   )
 }

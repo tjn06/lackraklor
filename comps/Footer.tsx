@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Image from 'next/image'
-import Logo from '../public/logo/logo_white.svg'
+import Logo from '../public/logo_white.svg'
 import ArrowUp from '../public/icons/arrow_up.svg'
 import UpArrow from '../comps/UpIcon'
 
@@ -124,12 +124,12 @@ const Footer = () => {
         <ItemBSocialContent><a>FACEBOOK</a><a>INSTAGRAM</a></ItemBSocialContent>
       </ItemBNav>
 
-      <ItemCLogo><Image src={Logo} alt="logo" /></ItemCLogo>
+      <ItemCLogo><Image src={Logo} width={85} height={100} alt="logo" /></ItemCLogo>
 
       <ItemDPhoneTop>
         <ItemDPhoneContent><a>TEL: 0703938743</a></ItemDPhoneContent>
         <ItemDTopContent><UpArrow/></ItemDTopContent>
-       
+
       </ItemDPhoneTop>
 
     </StyledFooter>

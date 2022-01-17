@@ -2,7 +2,7 @@ import {useState} from 'react'
 import styled from 'styled-components'
 import { Link } from "react-scroll";
 
-const StyledDownArrow = styled.a`
+const StyledDownArrow = styled.span`
   cursor: pointer;
 
   #down_arrow {

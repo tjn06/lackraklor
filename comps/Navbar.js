@@ -10,6 +10,7 @@ import IconPhone from '../public/icons/icon_phone.svg'
 import IconMail from '../public/icons/icon_email.svg'
 import IconInstagram from '../public/icons/icon_instagram.svg'
 import IconFacebook from '../public/icons/icon_facebook.svg'
+import LogoWhiteNav from '../comps/LogoWhiteNav'
 
 const translateYHeader = "-142"
 const mediaQ = "686px"; // To all mediaquerys in styled components in this component
@@ -61,7 +62,7 @@ const NavStyle = styled.header`
     @media (max-width: ${mediaQ}) {
       transition: all 0.1s ease;
       height: 50px;
-      padding: 0px 10px;
+      padding: 0px 10px 0px 0px;
       top: 0;
       /* &.shadow {
       box-shadow: none;
@@ -81,9 +82,9 @@ const StyledMaxWidthContent = styled.nav`
 
 const StyledLogoContainer = styled.div`
   /* z-index: 100; */
-  margin-top: 35px;
-  transform: translateY(0);
-  transition: transform 0.5s ease;
+  /* margin-top: 35px; */
+  /* transform: translateY(0);
+  transition: transform 0.5s ease; */
   /* width: 70px;
   height: 70px; */
   &.hidden {
@@ -154,7 +155,7 @@ const StyledListNavItem = styled.li`
 const StyledIconsMobile = styled.div`
   display: none;
   /* padding-top: 2px; */
-  margin-right: 0%;
+  margin-right: 10%;
   padding-top: 3px;
   font-size: 0.8em;
   font-weight: 300;
@@ -167,9 +168,9 @@ const StyledIconsMobile = styled.div`
 const StyledBorderSidesFirst = styled.div`
 display: flex;
 padding: 4px;
-border-width: 0px 1px 0px 1px;
+/* border-width: 0px 1px 0px 1px;
 border-color: white;
-border-style: solid;
+border-style: solid; */
 a {
     display: flex;
     align-items: center;
@@ -179,9 +180,9 @@ a {
 const StyledBorderSidesAfter = styled.div`
 display: flex;
 padding: 4px;
-border-width: 0px 1px 0px 0px;
+/* border-width: 0px 1px 0px 0px;
 border-color: white;
-border-style: solid;
+border-style: solid; */
 a {
     display: flex;
     align-items: center;
@@ -216,6 +217,7 @@ const Navbar = () => {
   const [showHeaderShadow, setshowHeaderShadow] = useState(false);
   const [tranparentHeader, setTranparentHeader] = useState(false);
   const [keepMenuOpen, setKeepMenuOpen] = useState(false);
+  const [changeLogo, setChangeLogo] = useState(false);
 
   // Minimumscoll - Change header states if scrolling 80px up or down
   const MINIMUM_SCROLL = 80;
@@ -229,6 +231,8 @@ const Navbar = () => {
 
     const isFromTop = currentScrollTop > 300;
 
+    setChangeLogo(isFromTop);
+    console.log("chagelogo", changeLogo);
     setshowHeaderShadow(currentScrollTop > 2);
     setTranparentHeader(currentScrollTop > 2);
 
@@ -262,9 +266,10 @@ const Navbar = () => {
     <NavStyle className={`${shadowStyle} ${hiddenStyle} ${transparentStyle}`}>
       <StyledMaxWidthContent>
 
-        <StyledLogoContainer className={`${shadowStyle} ${hiddenStyle} ${transparentStyle}`}>
-          <Image src="/logo/logo_white.svg" width={90} height={90} alt="Logo" />
-        </StyledLogoContainer>
+        {/* <StyledLogoContainer className={`${shadowStyle} ${hiddenStyle} ${transparentStyle}`}> */}
+          {/* <Image src="/logo_white.svg" width={90} height={90} alt="Logo" /> */}
+          <LogoWhiteNav changeLogo={changeLogo}/>
+        {/* </StyledLogoContainer> */}
 
         <StyledNav>
           <StyledNavOptions className={toggleHamburgerAndMenu ? "active" : ""}>

@@ -18,7 +18,7 @@ const Prices = () => {
       </ViewPortTopContent>
       {/* <HorizontalLine/> */}
       <Pricing/>
-      <BookingBanner topBoarder={true} bottomBoarder={true}/>
+      <BookingBanner topBoarder={true} bottomBoarder={false}/>
     </>
   )
 }

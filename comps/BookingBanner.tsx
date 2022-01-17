@@ -10,19 +10,19 @@ interface AltSectionProps {
 const StyledContainer = styled.section<{ topBoarder: boolean, bottomBoarder: boolean }>`
   display: flex;
   /* padding-bottom:2rem; */
-  margin: 0 2% 0 2%;
+  margin: 2rem 2% 0rem 2%;
   /* border-bottom: unset; */
   align-content: center;
   justify-content: center;
   text-align: center;
   /* border-top: 1px solid ${props => props.theme.colors.secondaryMediumGrey}; */
   border-top:1px solid ${props => props.topBoarder ? props.theme.colors.secondaryMediumGrey : "unset"};
-  /* border-bottom:1px solid ${props => props.bottomBoarder ? props.theme.colors.secondaryMediumGrey : "unset"}; */
+  border-bottom:1px solid ${props => props.bottomBoarder ? props.theme.colors.secondaryMediumGrey : "unset"};
   @media ${props => (props.theme.mediaQ.tablet)} {
     /* border-bottom: 1px solid ${props => props.theme.colors.secondaryMediumGrey}; */
     /* padding-top:4rem; */
     /* padding-bottom:2rem; */
-  
+    
     margin: 2rem 3% 0rem 3%;
   }
 `

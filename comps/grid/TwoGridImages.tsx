@@ -173,7 +173,7 @@ const TwoGridImages = () => {
   return(
     <StyledTwoGrid>
 
-      <StyledCenterGridItem>
+      <StyledCenterGridItem className="news">
         
         <StyledHeaderGridItemText>
           NYHETER
@@ -218,9 +218,9 @@ const TwoGridImages = () => {
       </StyledCenterGridItem>
 
 
-      <StyledCenterGridItem>
+      <StyledCenterGridItem className="offer">
         <StyledHeaderGridItemText>
-          FÖRLÄNGNING
+          ERBJUDANDE
         </StyledHeaderGridItemText>
         <StyledSubGridWrapper>
           <StyledSubGridItemText>
