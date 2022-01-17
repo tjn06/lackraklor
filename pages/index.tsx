@@ -21,7 +21,7 @@ import DragableCarousel from '../comps/DragableCarousel'
 import AltSection from '../comps/AltSection'
 import ViewPortTopContent from '../comps/ViewPortTopContent'
 import BookingBanner from '../comps/BookingBanner'
-import Map from '../comps/Map'
+// import Map from '../comps/Map'
 import DownIcon from '../comps/DownIcon'
 
 import dynamic from "next/dynamic";

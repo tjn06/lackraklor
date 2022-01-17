@@ -4,7 +4,9 @@ import ViewPortTopContent from '../comps/ViewPortTopContent';
 import ContactPresentation from '../comps/ContactPresentation'
 import ContactContent from '../comps/ContactContent'
 import BookingBanner from '../comps/BookingBanner'
-import Map from '../comps/Map'
+// import Map from '../comps/Map'
+import { useMemo } from 'react';
+import dynamic from 'next/dynamic';
 
 
 const Container = styled.div`
@@ -26,6 +28,14 @@ const StyledMaxWidth = styled.section`
 
 
 const Contact = () => {
+
+  const Map = useMemo(() => dynamic(
+    () => import("../comps/Map"),
+    { 
+      loading: () => <p>A map is loading</p>,
+      ssr: false
+    }
+  ), [])
 
   return (
     <Container>
