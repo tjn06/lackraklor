@@ -17,6 +17,10 @@ const Welcome = styled.div`
   flex-direction: row;
   z-index: 1;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
+  border-radius: 350px 350px 0 0;
+    @media ${props => (props.theme.mediaQ.tablet)} {
+      border-radius: 5px 5px 0 0;
+    }
 `
 const WelcomeContentMaxWidth = styled.article`
   z-index: 2;
@@ -27,15 +31,14 @@ const WelcomeContentMaxWidth = styled.article`
 `
 
 const StyledWelcomText= styled.p`
-font-size: 1.2rem;
-font-weight: 200;
+  font-size: 1.2rem;
+  font-weight: 200;
 `
 const StyledWelcomeHeader = styled.h2`
   font-family: Qhytsdakx;
   font-size: 5rem;
   font-weight: 300;
   margin: 0;
-  
   /* @media ${props => (props.theme.mediaQ.tablet)} {
     font-size: 5rem;
   } */
@@ -48,6 +51,7 @@ const StyledWelcomeHeader = styled.h2`
 `
 
 const PersonPresentation = styled.section`
+  border-radius:  0 0 5px 5px;
   background: radial-gradient(ellipse at top, #e7a6b9, #91d8df),
   radial-gradient(ellipse at bottom, #b1274e, #91d8df);
   position: relative;

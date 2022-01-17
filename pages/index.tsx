@@ -34,10 +34,14 @@ const StyledMain = styled.main`
 `
 
 const StyledMaxWidth = styled.section`
-  width:96%;
+  width:100%;
   max-width:1024px;
   margin:0 auto;
+  
   margin-bottom: 100px;
+  @media ${props => (props.theme.mediaQ.tablet)} {
+    width:96%;
+  }
   @media ${props => (props.theme.mediaQ.desktop)} {
     max-width:1280px;
   }

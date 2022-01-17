@@ -46,7 +46,7 @@ const StyledNavItems = styled.div`
   padding: 1rem 0 1rem 0;
     @media ${props => (props.theme.mediaQ.laptop)} {
       width: 100%;
-      justify-content: space-between;
+      justify-content: space-evenly;
     }
 `
 const StyledLinkWrapper = styled.div`
