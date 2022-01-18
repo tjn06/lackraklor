@@ -59,8 +59,12 @@ const StyledHeaderMessage = styled.h2`
 `
 
 const SyledSpaceElement = styled.div`
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 40px;
+  @media ${props => (props.theme.mediaQ.mobileL)} {
+      margin-top: 50px;
+      margin-bottom: 40px;
+    };
 `
 const PageHeaderText = () => {
 

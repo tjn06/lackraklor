@@ -19,8 +19,8 @@ const StyledFullViewport = styled.div<{viewportWidth : number , viewportHeight :
   @media ${props => (props.theme.mediaQ.mobileL)} {
     margin-top:0rem;
     height: ${props => (props.viewportHeight > 700 && props.viewportHeight < 1200) && (props.viewportWidth > 1200 && props.viewportWidth <= 1920)
-  ? "100vh" : "unset"
-  };
+    ? "100vh" : "unset"
+    };
   }
   @media ${props => (props.theme.mediaQ.tablet)} {
     background-size: contain;

@@ -69,10 +69,15 @@ const StyledHeaderMessage = styled.h2`
 `
 
 const SyledSpaceElement = styled.div`
-  margin-top: 50px;
+
+  margin-top: 160px;
   margin-bottom: 40px;
-  border-left: 1px solid white;
-  max-height: 20px;
+    @media ${props => (props.theme.mediaQ.mobileL)} {
+      margin-top: 50px;
+      margin-bottom: 40px;
+    };
+  /* border-left: 1px solid white; */
+  /* max-height: 20px; */
 `
 
 
