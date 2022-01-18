@@ -13,8 +13,6 @@ const theme: DefaultTheme = {
   },
 
 
-
-
   mediaQ: {
     mobileS: '(min-width: 320px)',
     mobileM: '(min-width: 375px)',

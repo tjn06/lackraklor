@@ -64,7 +64,7 @@ const StyledHeaderMessage = styled.h2`
   font-style: normal;
 `
 
-const VerticalLine = styled.div`
+const SyledSpaceElement = styled.div`
   margin-top: 50px;
   margin-bottom: 40px;
   border-left: 1px solid white;
@@ -90,7 +90,7 @@ const PageHeaderMultipleWords: React.FC<Props> = ({firstWord, secondWord}) => {
       {/* <HeaderBtn /> */}
 
 
-        <VerticalLine />
+        <SyledSpaceElement />
 
     </StyledPageHeader>
   )

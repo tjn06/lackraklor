@@ -168,9 +168,9 @@ const StyledIconsMobile = styled.div`
 const StyledBorderSidesFirst = styled.div`
 display: flex;
 padding: 4px;
-/* border-width: 0px 1px 0px 1px;
+border-width: 0px 1px 0px 1px;
 border-color: white;
-border-style: solid; */
+border-style: solid;
 a {
     display: flex;
     align-items: center;
@@ -180,9 +180,9 @@ a {
 const StyledBorderSidesAfter = styled.div`
 display: flex;
 padding: 4px;
-/* border-width: 0px 1px 0px 0px;
+border-width: 0px 1px 0px 0px;
 border-color: white;
-border-style: solid; */
+border-style: solid;
 a {
     display: flex;
     align-items: center;
@@ -305,22 +305,22 @@ const Navbar = () => {
         <StyledIconsMobile>
           <StyledBorderSidesFirst >
             <a href="tel:+496170961709">
-              <Image width="26" height="21" src={IconMail} alt="Phone"/>
+              <Image width="26" height="15" src={IconMail} alt="Phone"/>
             </a>
           </StyledBorderSidesFirst>
             <StyledBorderSidesAfter>
               <a href="tel:+496170961709">
-              <Image width="26" height="21" src={IconPhone} alt="Phone"/>
+              <Image width="26" height="15" src={IconPhone} alt="Phone"/>
               </a>
             </StyledBorderSidesAfter>
             <StyledBorderSidesAfter>
               <a href="tel:+496170961709">
-                <Image width="26" height="21" src={IconInstagram} alt="Instagram"/>
+                <Image width="26" height="15" src={IconInstagram} alt="Instagram"/>
               </a>
             </StyledBorderSidesAfter>
             <StyledBorderSidesAfter>
               <a href="tel:+496170961709">
-                <Image width="26" height="21" src={IconFacebook} alt="Facebook"/>
+                <Image width="26" height="15" src={IconFacebook} alt="Facebook"/>
               </a>
             </StyledBorderSidesAfter>
           </StyledIconsMobile>

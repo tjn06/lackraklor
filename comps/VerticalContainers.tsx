@@ -17,7 +17,7 @@ const Welcome = styled.div`
   flex-direction: row;
   z-index: 1;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
-  border-radius: 350px 350px 0 0;
+  /* border-radius: 350px 350px 0 0; */
     @media ${props => (props.theme.mediaQ.tablet)} {
       border-radius: 5px 5px 0 0;
     }
@@ -27,7 +27,6 @@ const WelcomeContentMaxWidth = styled.article`
   text-align: center;
   max-width: 600px;
   padding: 0 1% 0 1%;
-
 `
 
 const StyledWelcomText= styled.p`
