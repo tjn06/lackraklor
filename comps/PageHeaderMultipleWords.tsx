@@ -35,11 +35,15 @@ const StyledTextTop = styled.span`
 `
 const StyledTextBottom = styled.span`
   font-size: 25.5vw;
-  line-height: -0;
+  line-height: 25.5vw;
   font-family: Qhytsdakx;
   color: ${props => (props.theme.colors.secondary)};
   margin: 0;
   height: 10vw;
+  @media ${props => props.theme.mediaQ.mobileL} {
+      font-size: 18.5vw;
+      line-height: -0;
+    }
     @media ${props => props.theme.mediaQ.tablet} {
       font-size: 18.5vw;
       line-height: -0;
