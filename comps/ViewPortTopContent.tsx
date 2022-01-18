@@ -14,7 +14,7 @@ const StyledFullViewport = styled.div<{viewportWidth : number , viewportHeight :
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
-  height: 500px;
+  height: 400px;
   margin-top:2.5rem;
   @media ${props => (props.theme.mediaQ.mobileL)} {
     margin-top:0rem;

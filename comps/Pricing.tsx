@@ -100,11 +100,15 @@ const StyledPriceInfo = styled.div`
   /* background-color: ${props => props.theme.colors.secondary}; */
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   grid-gap: 0rem;
   .nomargin {
     margin: 0;
   }
+
+    @media ${props => (props.theme.mediaQ.mobileM)} {
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
 `
 
 const PriceHeader = styled.h2`
@@ -122,7 +126,11 @@ const StyledHeaderPriceText = styled.h2`
   padding-top: 1rem;
   font-weight: 300;
   font-size: 2rem;
-  
+    @media ${props => (props.theme.mediaQ.tablet)} {
+      padding-top: 1rem;
+      font-weight: 300;
+      font-size: 2rem;
+    }
 `
 
 const StyledPriceText = styled.p`
@@ -133,7 +141,11 @@ const StyledPriceText = styled.p`
   -o-transform: rotate(-3deg); */
   font-size: 5rem;
   color: ${props => props.theme.colors.main};
+    @media ${props => (props.theme.mediaQ.tablet)} {
+      font-size: 5rem;
+    }
 `
+
 const StyledCollapsible = styled(Collapsible)`
 `
 const StyledBookingBtn = styled.div`

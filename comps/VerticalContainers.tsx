@@ -17,7 +17,7 @@ const Welcome = styled.div`
   flex-direction: row;
   z-index: 1;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
-  /* border-radius: 350px 350px 0 0; */
+  border-radius: 70px 70px 0 0;
     @media ${props => (props.theme.mediaQ.tablet)} {
       border-radius: 5px 5px 0 0;
     }
@@ -50,7 +50,7 @@ const StyledWelcomeHeader = styled.h2`
 `
 
 const PersonPresentation = styled.section`
-  border-radius:  0 0 5px 5px;
+  border-radius:  0 0 0 0;
   background: radial-gradient(ellipse at top, #e7a6b9, #91d8df),
   radial-gradient(ellipse at bottom, #b1274e, #91d8df);
   position: relative;
@@ -59,6 +59,7 @@ const PersonPresentation = styled.section`
     @media ${props => (props.theme.mediaQ.tablet)} {
       grid-template-columns: 60% 1fr;
       grid-template-rows: auto;
+      border-radius:  0 0 5px 5px;
     }
 `
 const StyledImgPositionLeftHand = styled.div`
