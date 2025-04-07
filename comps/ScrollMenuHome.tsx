@@ -133,7 +133,7 @@ const ScrollMenuHome = () => {
                 duration={500}
                 to="titoc"
               >
-                TICTOC
+                TikTok
               </StyledLink>
             </StyledLinkWrapper>
             <StyledLinkWrapper>

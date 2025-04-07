@@ -3,13 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
-
-
-
 import { Link } from "react-scroll";
 import ScrollContainer from "react-indiana-drag-scroll";
-
-
 import ScrollMenuHome from '../comps/ScrollMenuHome'
 import PageHeaderText from '../comps/PageHeaderText'
 import VerticalContainers from '../comps/VerticalContainers'
@@ -21,13 +16,9 @@ import DragableCarousel from '../comps/DragableCarousel'
 import AltSection from '../comps/AltSection'
 import ViewPortTopContent from '../comps/ViewPortTopContent'
 import BookingBanner from '../comps/BookingBanner'
-// import Map from '../comps/Map'
 import DownIcon from '../comps/DownIcon'
-
 import dynamic from "next/dynamic";
 import { useMemo } from 'react'
-
-
 
 const StyledMain = styled.main`
   overflow: hidden;
