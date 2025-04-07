@@ -1,8 +1,14 @@
 # LÄCKRA KLOR 💅
 
-This is the MVP website for **LÄCKRA KLOR**, a nail design studio offering professional nail care and art in Sweden. The site includes pricing, a portfolio of nail designs, contact details, and links for online booking.
+This is a **proof-of-concept website** for **LÄCKRA KLOR**, a nail design studio.  
+The goal is to explore layout, design, and booking integration ideas.  
+The site includes pricing, a simple portfolio, contact details, and links to social media and booking.
 
-➡️ Visit the live site: [lackraklor.vercel.app](https://lackraklor.vercel.app)
+🧪 This is **not the final version** — it's a work in progress and may change significantly.
+
+➡️ Live preview: [lackraklor.vercel.app](https://lackraklor.vercel.app)
+
+---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
